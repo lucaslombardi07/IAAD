@@ -3,7 +3,7 @@ import mysql.connector as mysql
 import pandas as pd
 import json 
 
-user = json.load(open("user.txt", "r"))
+user = json.load(open("IAAD/user.txt", "r"))
 
 mydb = mysql.connect(
     host = user['host'],

@@ -1,14 +1,16 @@
 import streamlit as st
 import mysql.connector as mysql
 import pandas as pd
+import json 
+
+user = json.load(open("IAAD/user.txt", "r"))
 
 mydb = mysql.connect(
-    host = "localhost",
-    user = "root",
-    password = "30336604",
-    database = "clinica_IAAD"
+    host = user['host'],
+    user = user['user'],
+    password = user['password'],
+    database = user['database']
 )
-
 cursor = mydb.cursor()
 st.write(mydb)
 
