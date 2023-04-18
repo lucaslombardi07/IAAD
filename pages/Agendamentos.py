@@ -13,7 +13,8 @@ mydb = mysql.connect(
 )
 
 cursor = mydb.cursor()
-st.write(mydb)
+
+st.header("Agendamentos")
 
 def Agendar():
     cl1, cl2 = st.columns(2)

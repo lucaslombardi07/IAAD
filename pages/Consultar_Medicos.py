@@ -138,11 +138,6 @@ elif selected == "Atualizar":
         st.success("Médico atualizado com sucesso!")
 
 else: 
-
-    dic = {'Código': p_codigo, 'Nome': p_nome, 'Clinica': p_clinica, 'Especialidade': p_especialidade}
-    s = st.radio("Buscar Medico por:", dic)
-    f = dic[s]
-    st.write(f())
     cursor.execute("SELECT * from Medico;")
 
     columns = [col[0] for col in cursor.description]
