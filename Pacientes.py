@@ -23,8 +23,9 @@ selection = st.selectbox("Selecione a operação para ser feita nos pacientes", 
 
 if selection == "Inserir":
     st.header("Inserir novo paciente")
-    cpfpaciente = st.text_input("Código do paciente")
+    cpfpaciente = st.text_input("CPF do paciente")
     nome = st.text_input("Nome do paciente")
+    genero = st.selectbox("Gênero do paciente", ["M", "F"])
     datanascimento = st.date_input("Data de nascimento do paciente")
     telefone = st.text_input("Telefone do paciente")
     email = st.text_input("Email do paciente")
